@@ -23,15 +23,15 @@ public class Manager {
     }
 
     public Manager(int countFilms) {
-        this.countFilms=countFilms;
+        this.countFilms = countFilms;
     }
 
     public Films[] findLast() {
         int resultLength;
-        if (countFilms > 10) {
-            resultLength = 10;
-        } else {
+        if (film.length > countFilms) {
             resultLength = countFilms;
+        } else {
+            resultLength = film.length;
         }
 
         Films[] result = new Films[resultLength];
@@ -41,6 +41,4 @@ public class Manager {
         }
         return result;
     }
-
-
 }
